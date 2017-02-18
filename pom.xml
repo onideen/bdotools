@@ -7,10 +7,11 @@
 	<artifactId>bdotools</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
     <modules>
-        <module>bdotools-repository</module>
+		<module>bdotools-domain</module>
 		<module>bdotools-common</module>
+        <module>bdotools-repository</module>
         <module>gatekeeper-bot</module>
-    </modules>
+	</modules>
     <packaging>pom</packaging>
 
 	<name>bdotools</name>
@@ -83,14 +84,6 @@
         </dependencies>
 	</dependencyManagement>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
     <repositories>
 
         <repository>
