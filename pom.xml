@@ -11,7 +11,10 @@
 		<module>bdotools-common</module>
         <module>bdotools-repository</module>
         <module>gatekeeper-bot</module>
-	</modules>
+		<module>bdotools-provider</module>
+		<module>bdotools-consumer</module>
+        <module>bdo-member-tracker</module>
+    </modules>
     <packaging>pom</packaging>
 
 	<name>bdotools</name>
@@ -81,6 +84,11 @@
                 <version>${JDA.version}</version>
             </dependency>
 
+			<dependency>
+				<groupId>org.hamcrest</groupId>
+				<artifactId>hamcrest-all</artifactId>
+				<version>${hamcrest.version}</version>
+			</dependency>
         </dependencies>
 	</dependencyManagement>
 

@@ -1,9 +1,10 @@
 package no.didi.bdotools.domain;
 
-import com.sun.istack.internal.NotNull;
 import lombok.Builder;
 import lombok.NonNull;
 import lombok.ToString;
+
+import java.util.List;
 
 /**
  * This object represent an ingame character with name, class, power and stats update
@@ -18,7 +19,10 @@ public class Character {
     @NonNull
     private String name;
 
-    @NotNull
-    private CharacterClass characterClass;
+    @NonNull
+    private BDOClass bdoClass;
+
+    @NonNull
+    private List<BDOStat> bdoStats;
 
 }

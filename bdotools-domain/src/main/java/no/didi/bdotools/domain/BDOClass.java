@@ -5,7 +5,7 @@ package no.didi.bdotools.domain;
  *
  * @author Vegar Engen
  */
-public enum CharacterClass {
+public enum BDOClass {
     BERSERKER,
     RANGER,
     WITCH,

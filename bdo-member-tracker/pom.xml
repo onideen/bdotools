@@ -9,22 +9,26 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>bdotools-domain</artifactId>
-
-
+    <artifactId>bdo-member-tracker</artifactId>
     <dependencies>
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>RELEASE</version>
+            <groupId>net.dv8tion</groupId>
+            <artifactId>JDA</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.hamcrest</groupId>
-            <artifactId>hamcrest-all</artifactId>
+            <groupId>no.didi.bdotools</groupId>
+            <artifactId>bdotools-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>no.didi.bdotools</groupId>
+            <artifactId>bdotools-domain</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
+
+
 </project>

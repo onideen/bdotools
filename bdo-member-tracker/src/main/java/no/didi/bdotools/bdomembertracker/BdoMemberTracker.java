@@ -1,26 +1,26 @@
-package no.didi.bdotools.gatekeeper;
+package no.didi.bdotools.bdomembertracker;
 
-/**
- * @author Vegar Engen
- */
 import net.dv8tion.jda.core.AccountType;
 import net.dv8tion.jda.core.JDA;
 import net.dv8tion.jda.core.JDABuilder;
 import net.dv8tion.jda.core.exceptions.RateLimitedException;
-import no.didi.bdotools.gatekeeper.support.CommandListener;
-import no.didi.bdotools.gatekeeper.support.command.HelloCommand;
+import no.didi.bdotools.bdomembertracker.support.RegisterCommand;
+import no.didi.bdotools.common.CommandListener;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import javax.security.auth.login.LoginException;
 
+/**
+ * @author Vegar Engen
+ */
 
 @SpringBootApplication
-public class GatekeeperTrackerApplication implements CommandLineRunner {
+public class BdoMemberTracker implements CommandLineRunner {
 
     public static void main(String[] args) {
-        SpringApplication.run(GatekeeperTrackerApplication.class, args);
+        SpringApplication.run(BdoMemberTracker.class, args);
     }
 
 
@@ -33,10 +33,12 @@ public class GatekeeperTrackerApplication implements CommandLineRunner {
                     .setToken(BOT_TOKEN)
                     .setBulkDeleteSplittingEnabled(false)
                     .addListener(CommandListener.builder()
-                            .command(new HelloCommand())
+                            .command(new RegisterCommand())
                             .build()
                     )
                     .buildBlocking();
+
+
         } catch (LoginException e) {
             e.printStackTrace();
         } catch (InterruptedException e) {

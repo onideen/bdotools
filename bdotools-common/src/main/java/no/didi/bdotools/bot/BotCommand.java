@@ -1,10 +1,12 @@
 package no.didi.bdotools.bot;
 
+import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
+
 /**
- * Created by vegar on 2/11/2017.
+ * @author Vegar Engen
  */
 public interface BotCommand {
-    boolean isCommand(String s);
-    void run(String[] commandArray);
+    boolean isCommand(String message);
+    void run(MessageReceivedEvent commandString);
 
 }
